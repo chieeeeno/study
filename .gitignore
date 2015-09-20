@@ -1,0 +1,5 @@
+/**/*.sass-cache
+/**/*node_modules
+/**/*compass_config.rb
+/**/*package.json
+/**/*Gruntfile.js
