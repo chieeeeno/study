@@ -1,0 +1,164 @@
+/******************************************************************
+
+Site Name: AngularJS Boilerplate
+Code: Jozef Butko - jozefbutko.com/resume
+Date: Mar 2015
+
+******************************************************************/
+
+// normalize: http://necolas.github.io/normalize.css/
+@import "partials/normalize";
+
+// Sass variables
+@import "partials/variables";
+
+// Helpers
+@import "partials/helpers";
+
+// typography
+@import "partials/typography";
+
+// Sass functions
+@import "partials/functions";
+
+// import mixins
+@import "partials/mixins";
+
+// the grid
+@import "partials/grid";
+
+/*********************
+IMPORTING MODULES
+*********************/
+
+// alert boxes
+@import "modules/alerts";
+
+// buttons
+@import "modules/buttons";
+
+// forms (inputs & labels)
+@import "modules/forms";
+
+/*********************
+BASE (MOBILE) SIZE
+*********************/
+
+// styles in base.scss
+@import "breakpoints/base";
+
+/*********************
+LARGER MOBILE DEVICES
+*********************/
+@media only screen and (min-width: 481px) {
+
+	// styles in 481up.scss
+	// @import "breakpoints/481up";
+
+} // end of media query
+
+/*********************
+TABLET & SMALLER LAPTOPS
+*********************/
+@media only screen and (min-width: 768px) {
+
+	// styles in 768up.scss
+	// @import "breakpoints/768up";
+
+} // end of media query
+
+/*********************
+DESKTOP
+*********************/
+@media only screen and (min-width: 1030px) {
+
+	// styles in 1030up.scss
+	// @import "breakpoints/1030up";
+
+} // end of media query
+
+/*********************
+LARGE VIEWING SIZE
+*********************/
+@media only screen and (min-width: 1240px) {
+
+	// styles in 1240up.scss
+	// @import "breakpoints/1240up";
+
+} // end of media query
+
+/*********************
+RETINA (2x RESOLUTION DEVICES)
+*********************/
+// @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+//        only screen and (min--moz-device-pixel-ratio: 1.5),
+//        only screen and (min-device-pixel-ratio: 1.5) {
+
+// 	// styles in 2x.scss
+// 	@import "breakpoints/2x";
+
+// } // end of media query
+
+/*********************
+PRINT STYLESHEET
+*********************/
+@media print {
+
+	// styles in print.scss
+	@import "partials/print";
+
+}
+
+p{
+  margin: 0;
+}
+
+.main-wrapper{
+  background: url(../img/retrip.jpg) no-repeat top center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+    width: 100%;
+    height: 100%;
+  .logoBlock{
+    width: 60%;
+    margin: auto;
+    font-family: serif;
+    color: #fff;
+    font-size: 3.0rem;
+    text-align: center;
+    opacity:0;
+    .txt{
+      text-shadow: 3px 3px 5px rgba(0, 19, 68,0.9);
+      font-style: italic;
+    }
+    .logo{
+    margin: auto;
+    width: 30%;
+//    opacity:0;
+    }
+  }
+  
+  
+  .et{
+    width: 100px;
+    position: absolute;
+    top: 40%;
+    left: -100px;
+    z-index: 100;
+  }
+  
+}
+
+
+.fadeIn{
+  animation: fadein 2s linear 0s 1 forwards;
+}
+@-webkit-keyframes fadein {
+	0%{
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
