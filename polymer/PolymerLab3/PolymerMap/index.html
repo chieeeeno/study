@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>PolymerMap</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="bower_components/google-map/google-map.html">
+  <link rel="import" href="bower_components/google-map/google-map-directions.html">
+  <link rel="import" href="bower_components/core-field/core-field.html">
+  <link rel="import" href="bower_components/core-icon/core-icon.html">
+  <link rel="import" href="bower_components/core-icons/core-icons.html">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <template is="auto-binding">
+
+    <google-map map="{{map}}"
+                latitude="37.779" longitude="-122.3892"></google-map>
+    <google-map-directions map="{{map}}"
+                           startAddress="{{start}}"
+                           endAddress="{{end}}">
+    </google-map-directions>
+
+    <div id="inputs">
+      <core-field>
+        <core-icon icon="icons:search"></core-icon>
+        <input placeholder="Start address" value="{{start}}">
+      </core-field>
+      <core-field>
+        <core-icon icon="icons:search"></core-icon>
+        <input placeholder="End address" value="{{end}}">
+      </core-field>
+    </div>
+
+  </template>
+
+</body>
+</html>
